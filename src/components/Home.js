@@ -9,8 +9,7 @@ export default function Home() {
 
 const {findByCharacter, setFindByCharacter, results, setResults} = useContext(InfoContext);
     let history = useHistory();
-    console.log(findByCharacter);
-
+    //console.log(findByCharacter);
     function showMovies(){
     results.length > 0 ? history.push("/movies") : history.push("/")
     }
@@ -20,7 +19,7 @@ const {findByCharacter, setFindByCharacter, results, setResults} = useContext(In
         <div className="container">
         <form onSubmit={(e)=> e.preventDefault()}>
             <img className ="img" src={logo} alt="Logo Star Wars" />
-            <input onChange ={async (e) =>  { e.target.value.length > 1  ? setResults(await Search(findByCharacter, e.target.value)) : setResults([]); console.log(results)}} 
+            <input onChange ={async (e) =>  { e.target.value.length > 1  ? setResults(await Search(findByCharacter, e.target.value)) : setResults([]);}} 
             className="search-box" type="text" placeholder="Search for movies or characters"></input>
             <div className="buttonContainer">
                 <button onClick={() => { setFindByCharacter(true);   showMovies();}} className="btn">People <SearchIcon /></button>

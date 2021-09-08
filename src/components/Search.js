@@ -1,9 +1,10 @@
 import axios from "axios";
 
 export default function Search(findByCharacter, input) {
-console.log(findByCharacter, "search" , "search")
     return axios.get(`https://swapi.dev/api/${
-        findByCharacter ? 'people' : 'films'
-    }/?search=${input}`).then((response) => response.data.results);
+        findByCharacter ? 'people' : 'films'}/?search=${input}`
+        ).then((response) =>
+        response.data.results
+        ).catch((err) => 
+        console.error(err));
 }
-

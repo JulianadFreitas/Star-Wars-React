@@ -1,4 +1,4 @@
-.movieContainer{
+.movieContainer {
   width: 800px;
   height: 700px;
   background: #fff;
@@ -10,30 +10,40 @@
   box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
   margin-right: 16px;
   background-color: green;
-  color:red;
+  color: red;
 }
-#backgroudImage{
+
+#backgroudImage {
   position: relative;
-    height: 100vh;
-    width: 100vw;
-    background: url('../../assets/imgs/teste.jpg');
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0 auto;
+  height: 100vh;
+  width: 100vw;
+  background: url('../../assets/imgs/teste.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
 }
-.teste{
-color:white;
-font-size: 60px;}
+
+.teste {
+  color: white;
+  font-size: 60px;
+}
+
 .boxMovie {
-font-size: 30px;
-width: 500px;
-height: 30px;
-color: white;
-background-color: gray;
-z-index: 4;
-margin-top: 30px;
-border-radius: 20px;
-text-decoration: none;}
+  font-size: 30px;
+  width: 500px;
+  height: 30px;
+  color: white;
+  background-color: gray;
+  margin-top: 30px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+ .boxApresentation{
+  height: 500px;
+  width: 100%;
+  background-color: blue;
+}
