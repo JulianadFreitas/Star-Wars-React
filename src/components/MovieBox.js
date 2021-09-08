@@ -7,9 +7,9 @@
   console.log("Item",results);
       return (
           <>   {
-               results.map((item) => {
+               results.map((item,i) => {
                 return (
-                <div className="boxMovie">
+                <div className="boxMovie" key = {i}>
                   <Link to={findByCharacter
                     ? `/people/${item.url.slice(29)}`
                     : `/movie/${item.url.slice(28)}`}> 

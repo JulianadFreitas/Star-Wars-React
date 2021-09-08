@@ -4,6 +4,8 @@
 
 $roboto-font: 'Roboto Condensed', sans-serif; 
 $body-color:black;
+$shadow:0px 0px 5px 8px rgba(255, 255, 204, 0.20);
+$gradiente: linear-gradient(45deg, black ,#111111);
 
 body {
     font-family: $roboto-font;

@@ -1,7 +1,8 @@
 .btn {
     align-items: center;
     background-color: gray;
-    background-image: linear-gradient(45deg, black ,#111111);
+    background-image: $gradiente;
+    box-shadow: $shadow;
     border-radius: 15px;
     border: none;
     color: white;
@@ -13,5 +14,7 @@
     font-size: 25px;
     padding: 20px;
     font-weight: bold;
+    cursor: pointer;
+    border: 3px solid black;
 }
 
