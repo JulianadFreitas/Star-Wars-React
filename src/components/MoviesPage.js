@@ -1,24 +1,21 @@
-import React, {useEffect, useState} from "react";
-import { useParams } from "react-router";
-import axios from "axios";
-import Movie from "./Movie"
-export default function MoviesPage({results}) {
+import React, {useContext} from "react";
+import MovieBox from "./MovieBox";
+import InfoContext from '../contexts/InfoContext.js';
 
-//const { id } = useParams();
-// useEffect(() => {
-//     const request = axios.get(`https://swapi.dev/api/films/${id}`)
-//     request.then((response) => setMovies(response.data))
-//     request.catch(() => setMovies("Error"));
-//   }, [])
-console.log(results, results[0].title,"aqui :D")
-    return (
-        <div className="movieContainer">{
-            results.map((item) => {
-            return(<Movie data = {item}/>)})} {results[0].title} oi
-         <h1 className="title"> 
-         </h1>
-        </div> 
-    );
+export default function MoviesPage() {
+    const {findByCharacter, results} = useContext(InfoContext);
+    console.log(findByCharacter, results[0].url, "deeeeu")
+    return (<div id="backgroudImage">
+        <div className="container">
+            <ul> {
+                results.map((item, i) => {
+                    console.log(item, "aqui")
+                    return (<div className="boxMovie" key ={i}>
+                        <MovieBox item = {item}/>
+                    </div>)
+                })
+            } </ul>
+        </div>
+    </div>);
 }
-
 

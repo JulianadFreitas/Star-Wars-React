@@ -1,5 +1,5 @@
 .movieContainer{
-  width: 500px;
+  width: 800px;
   height: 700px;
   background: #fff;
   display: flex;
@@ -10,8 +10,30 @@
   box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
   margin-right: 16px;
   background-color: green;
+  color:red;
 }
-
+#backgroudImage{
+  position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: url('../../assets/imgs/teste.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
 .teste{
 color:white;
-font-size: 20px;}
+font-size: 60px;}
+.boxMovie {
+font-size: 30px;
+width: 500px;
+height: 30px;
+color: white;
+background-color: gray;
+z-index: 4;
+margin-top: 30px;
+border-radius: 20px;
+text-decoration: none;}

@@ -1,13 +1,16 @@
-import React, {useState} from "react";
-import { useHistory } from "react-router-dom";
-import logo from '../assets/imgs/starwars-logo.png';
-import axios from "axios";
+import React,{useContext} from "react";
+import { useHistory} from "react-router-dom";
+import logo from '../assets/imgs/logo.png';
 import styled from "styled-components";
 import { FcSearch } from 'react-icons/fc';
 import Search from "./Search";
-export default function Home({findByCharacter, setFindByCharacter, results, setResults}) {
+import InfoContext from '../contexts/InfoContext';
+export default function Home() {
+
+const {findByCharacter, setFindByCharacter, results, setResults} = useContext(InfoContext);
     let history = useHistory();
-    console.log(findByCharacter)
+    console.log(findByCharacter);
+
     function showMovies(){
     results.length > 0 ? history.push("/movies") : history.push("/")
     }
@@ -20,8 +23,8 @@ export default function Home({findByCharacter, setFindByCharacter, results, setR
             <input onChange ={async (e) =>  { e.target.value.length > 1  ? setResults(await Search(findByCharacter, e.target.value)) : setResults([]); console.log(results)}} 
             className="search-box" type="text" placeholder="Search for movies or characters"></input>
             <div className="buttonContainer">
-                <button onClick={() => { setFindByCharacter(true);   showMovies() ;console.log(results) }} className="btn">People <SearchIcon /></button>
-                <button onClick={() => { setFindByCharacter(false);  showMovies() ;console.log(results);}} className="btn">Movies <SearchIcon /></button>
+                <button onClick={() => { setFindByCharacter(true);   showMovies();}} className="btn">People <SearchIcon /></button>
+                <button onClick={() => { setFindByCharacter(false);  showMovies();}} className="btn">Movies <SearchIcon /></button>
             </div>
         </form>
         </div>
