@@ -1,19 +1,17 @@
-
-    .btn {
+.btn {
     align-items: center;
     background-color: gray;
-    border-radius: 8px;
-    border:none;
-    color:white;
-    display:flex;
+    background-image: linear-gradient(45deg, black ,#111111);
+    border-radius: 15px;
+    border: none;
+    color: white;
+    display: flex;
     height: 45px;
     width: 45%;
     justify-content: center;
     font-family: $roboto-font;
     font-size: 25px;
     padding: 20px;
-background-image: linear-gradient(45deg, black ,#111111);
-
-
-
+    font-weight: bold;
 }
+

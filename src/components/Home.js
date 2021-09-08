@@ -1,39 +1,34 @@
 import React, {useState} from "react";
+import { useHistory } from "react-router-dom";
 import logo from '../assets/imgs/starwars-logo.png';
 import axios from "axios";
 import styled from "styled-components";
-import { FcSearch } from 'react-icons/fc' ;
-
-export default function Home() {
-    const [find, setFind] = useState([]);
-
-    function SearchMovies() {
-        const request = axios.get(`https://swapi.dev/api/films/?search=${find}`);
-        request.then((response) => {
-            console.log(response.data);
-        });
+import { FcSearch } from 'react-icons/fc';
+import Search from "./Search";
+export default function Home({findByCharacter, setFindByCharacter, results, setResults}) {
+    let history = useHistory();
+    console.log(findByCharacter)
+    function showMovies(){
+    results.length > 0 ? history.push("/movies") : history.push("/")
     }
-    function SearchCharacters() {
-        const request = axios.get(`https://swapi.dev/api/people/?search=${find}`)
-        request.then((response) => {
-            console.log(response.data);
-        });
-    }
+
     return (
         <div id="container-imagem">
         <div className="container">
         <form onSubmit={(e)=> e.preventDefault()}>
             <img className ="img" src={logo} alt="Logo Star Wars" />
-            <input onChange ={e => setFind(e.target.value) } className="search-box" type="text" placeholder="Search for movies and characters"></input>
+            <input onChange ={async (e) =>  { e.target.value.length > 1  ? setResults(await Search(findByCharacter, e.target.value)) : setResults([]); console.log(results)}} 
+            className="search-box" type="text" placeholder="Search for movies or characters"></input>
             <div className="buttonContainer">
-                <button onClick={() => SearchCharacters(find)} className="btn">People <SearchIcon /></button>
-                <button onClick={() => SearchMovies(find)} className="btn">Movies <SearchIcon /></button>
+                <button onClick={() => { setFindByCharacter(true);   showMovies() ;console.log(results) }} className="btn">People <SearchIcon /></button>
+                <button onClick={() => { setFindByCharacter(false);  showMovies() ;console.log(results);}} className="btn">Movies <SearchIcon /></button>
             </div>
-        </form></div>
-        </div> 
+        </form>
+        </div>
+        </div>
+
     );
 }
-
 const SearchIcon = styled(FcSearch)`
   font-size: 30px;
   cursor: pointer;
