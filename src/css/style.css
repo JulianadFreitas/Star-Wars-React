@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+@import url("react-loader-spinner/dist/loader/css/react-spinner-loader.css");
 body {
   font-family: "Roboto Condensed", sans-serif;
   margin: 0;
@@ -8,7 +9,7 @@ body {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background: url("../../assets/imgs/Stars.gif");
+  background: url("../../assets/imgs/star.gif");
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,7 +115,7 @@ strong {
 }
 
 .container {
-  width: 70%;
+  width: 60%;
   height: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -163,8 +164,8 @@ form {
 }
 
 .img {
-  width: 70%;
-  margin-bottom: 50px;
+  width: 60%;
+  margin-bottom: 30px;
 }
 
 .movieContainer {
@@ -209,6 +210,25 @@ form {
   font-family: "Roboto Condensed", sans-serif;
 }
 
+div {
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: purple;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-top: 20px;
+}
+
 .movieContainer {
   width: 800px;
   height: 700px;
@@ -230,14 +250,13 @@ form {
   margin-right: 16px;
   background-color: green;
   color: red;
-  font-family: "Roboto Condensed", sans-serif;
 }
 
 #backgroudImage {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background: url("../../assets/imgs/teste.jpg");
+  background: url("../../assets/imgs/backgroundMovies.jpg");
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -253,11 +272,6 @@ form {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 auto;
-}
-
-.teste {
-  color: white;
-  font-size: 60px;
 }
 
 .boxMovie {
@@ -284,9 +298,8 @@ form {
 }
 
 .boxApresentation {
-  height: 500px;
-  width: 100%;
-  background-color: blue;
+  height: 300px;
+  width: 550px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -301,14 +314,13 @@ form {
           box-shadow: 0px 0px 5px 8px rgba(255, 255, 204, 0.2);
   background-image: linear-gradient(45deg, black, #111111);
   color: beige;
+  padding-left: 30px;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
-a {
-  text-decoration: none;
-  color: purple;
-}
-
-h1 {
-  font-weight: bold;
+@media (max-width: 1000px) {
+  .boxApresentation {
+    height: 300px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

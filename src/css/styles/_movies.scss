@@ -1,3 +1,19 @@
+div {
+  font-size: 25px;
+}
+a {
+  text-decoration: none;
+  color: purple;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+li{
+margin-top: 20px;}
+
 .movieContainer {
   width: 800px;
   height: 700px;
@@ -11,14 +27,14 @@
   margin-right: 16px;
   background-color: green;
   color: red;
-  font-family: $roboto-font;
+  
 }
 
 #backgroudImage {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background: url('../../assets/imgs/teste.jpg');
+  background: url('../../assets/imgs/backgroundMovies.jpg');
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -27,10 +43,7 @@
   margin: 0 auto;
 }
 
-.teste {
-  color: white;
-  font-size: 60px;
-}
+
 
 .boxMovie {
   font-size: 25px;
@@ -44,14 +57,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow:$shadow; 
+  box-shadow: $shadow;
   background-image: $gradiente;
 }
 
- .boxApresentation{
-  height: 500px;
-  width: 100%;
-  background-color: blue;
+.boxApresentation {
+  height: 300px;
+  width: 550px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,10 +71,12 @@
   box-shadow: $shadow;
   background-image: $gradiente;
   color: beige;
+  padding-left: 30px;
+  font-family: $roboto-font;
+  @media(max-width:1000px) {
+    height: 300px;
+  }
 }
-a{
-text-decoration:none;
-color:purple;
-}
-h1{
-font-weight:bold ;}
+
+// .apresentationMovie{
+// }
