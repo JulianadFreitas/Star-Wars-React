@@ -19,7 +19,7 @@ return (
                 <Route path="/movies" exact>
                     <MoviesPage/>
                 </Route>
-                <Route path="/movie/:id" exact>
+                <Route path="/movie/:id/" exact>
                     <Movie/>
                 </Route>
             </Switch>
