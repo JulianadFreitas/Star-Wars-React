@@ -18,7 +18,7 @@ export default function Movie(){
     .catch((err) => 
       console.error(err));
     }, [id]);
-  console.log(info.characters)
+
   useEffect(() => {
     if(info){
       axios.get(info.characters[0])
