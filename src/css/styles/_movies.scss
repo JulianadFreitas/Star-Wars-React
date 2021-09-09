@@ -16,6 +16,9 @@ h1 {
 li {
   margin-top: 20px;
 }
+.textBox{
+  margin-left:30px;
+}
 
 .movieContainer {
   width: 800px;
@@ -72,7 +75,6 @@ li {
   box-shadow: $shadow;
   background-image: $gradiente;
   color: beige;
-  padding-left: 30px;
   font-family: $roboto-font;
 
   @media(max-width:1000px) {

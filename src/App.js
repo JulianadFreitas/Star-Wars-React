@@ -13,13 +13,13 @@ return (
     <InfoContext.Provider value={{ findByCharacter, setFindByCharacter, results, setResults }}>
         <BrowserRouter>
             <Switch>
-                <Route exact path="/">
+                <Route path="/" exact>
                     <Home/>
                 </Route>
-                <Route exact path="/movies">
+                <Route path="/movies" exact>
                     <MoviesPage/>
                 </Route>
-                <Route path="/movie/:id">
+                <Route path="/movie/:id" exact>
                     <Movie/>
                 </Route>
             </Switch>
