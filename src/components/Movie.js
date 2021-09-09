@@ -18,17 +18,19 @@ export default function Movie(){
     .catch((err) => 
       console.error(err));
     }, [id]);
-
+  // console.log(info.characters[0])
+ 
   useEffect(() => {
     if(info){
+      
       axios.get(info.characters[0])
-      .then((response) => setCharacter1([response.data.name]))
+      .then((response) => setCharacter1(response.data.name))
       .catch(()=>setCharacter1(""));
       axios.get(info.characters[1])
-      .then((response) => setCharacter2([response.data.name]))
+      .then((response) => setCharacter2(response.data.name))
       .catch(()=>setCharacter2(""));
       axios.get(info.characters[2])
-      .then((response) => setCharacter3([response.data.name]))
+      .then((response) => setCharacter3(response.data.name))
       .catch(()=>setCharacter3(""));
       }     
   }, [info]);
