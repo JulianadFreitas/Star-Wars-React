@@ -32,22 +32,23 @@ export default function Movie(){
       .catch(()=>setCharacter3(""));
       }     
   }, [info]);
+
   return (
     <div id="backgroudImage">
-        <div className="container">
-          <div className="boxApresentation">
-            {character3 ? (
-                <div className="apresentationMovie">
-                    <h1>{info.title}</h1>
-                    <li>Producer: {info.producer}</li>
-                    <li>Director: {info.director}</li>
-                    <li>Characters:  {character1}, {character2}, {character3}</li>
-                    <li>Episode:  {info.episode_id}</li>
-                </div>) 
+      <div className="container">
+        <div className="boxApresentation">
+          {character3 ? (
+            <div>
+              <h1>{info.title}</h1>
+              <li>Producer: {info.producer}</li>
+              <li>Director: {info.director}</li>
+              <li>Characters:  {character1}, {character2}, {character3}</li>
+              <li>Episode:  {info.episode_id}</li>
+            </div>) 
                 : <Loader type="Bars" color="purple" height={60} width={100} timeout={1000}/>
-            } 
-          </div>
+             } 
         </div>
+      </div>
     </div>
 );
 }

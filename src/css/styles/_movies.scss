@@ -1,6 +1,7 @@
 div {
   font-size: 25px;
 }
+
 a {
   text-decoration: none;
   color: purple;
@@ -11,8 +12,10 @@ h1 {
   font-size: 30px;
   margin-bottom: 20px;
 }
-li{
-margin-top: 20px;}
+
+li {
+  margin-top: 20px;
+}
 
 .movieContainer {
   width: 800px;
@@ -27,7 +30,7 @@ margin-top: 20px;}
   margin-right: 16px;
   background-color: green;
   color: red;
-  
+
 }
 
 #backgroudImage {
@@ -42,8 +45,6 @@ margin-top: 20px;}
   flex-direction: column;
   margin: 0 auto;
 }
-
-
 
 .boxMovie {
   font-size: 25px;
@@ -73,10 +74,8 @@ margin-top: 20px;}
   color: beige;
   padding-left: 30px;
   font-family: $roboto-font;
+
   @media(max-width:1000px) {
     height: 300px;
   }
 }
-
-// .apresentationMovie{
-// }
